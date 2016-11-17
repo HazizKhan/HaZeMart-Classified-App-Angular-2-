@@ -1,0 +1,35 @@
+.logo-img{
+    /*margin-top:15px;*/
+    max-height: 24px;
+}
+nav{
+    background-color: #fff;
+}
+a{
+    font-weight: bold;
+
+}
+li a:hover{
+  background-color: #333 !important;
+  color: #fff !important;
+}
+.registerBtn{
+  background-color: #00D2F5;
+}
+.registerBtn a{
+  color: white !important;
+  letter-spacing: 1px;
+}
+/*.btn{*/
+    /*margin-left: 0;*/
+    /*margin-right: 0;*/
+    /*color: rgb(255, 255, 255);*/
+/*}*/
+/*.btn:nth-child(2){*/
+    /*margin-right: 10px;*/
+/*}*/
+/*.loginIcon{*/
+    /*margin-top: -15px;*/
+    /*margin-right: 3px;*/
+
+/*}*/

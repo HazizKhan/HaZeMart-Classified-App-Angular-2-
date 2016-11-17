@@ -1,0 +1,105 @@
+<div class="container" style="padding-top: 50px">
+  <div class="row">
+    <div class="col-md-10 col-xs-12 col-md-push-1 col-xs-push-0">
+      <div class="row">
+        <div class="col-md-10 col-xs-push-1 col-xs-push-0 col-lg-push-1 col-sm-push-0">
+          <img [src]="post.image" [alt]="post.company + ' ' + post.model" class="mainImg">
+        </div>
+
+      </div>
+      <h1>{{post.company + ' ' + post.model}} <br><small>Rs. {{post.price}} /=</small></h1>
+      <hr>
+      <hr>
+
+      <h2>Whats New:</h2>
+      <hr>
+      <div class="row">
+        <div class="col-md-10 col-xs-push-1 col-xs-push-0 col-lg-push-1 col-sm-push-0">
+          <p>{{post.details}}</p>
+        </div>
+      </div>
+      <h2>Details:</h2>
+      <div class="row">
+        <div class="col-md-10 col-xs-push-1 col-xs-push-0 col-lg-push-1 col-sm-push-0">
+          <table *ngIf="post.type == 'car'" class="table">
+            <tr>
+              <th>Engine:</th>
+              <td>{{post.engine}}</td>
+            </tr>
+            <tr>
+              <th>EPA Class:</th>
+              <td>{{post.epaClass}}</td>
+            </tr>
+            <tr>
+              <th>Style Name:	</th>
+              <td>{{post.styleName}}</td>
+            </tr>
+            <tr>
+              <th>Drivetrain:	</th>
+              <td>{{post.driveTrain}}</td>
+            </tr>
+            <tr>
+              <th>Passenger Capacity:</th>
+              <td>{{post.passengerCapacity}}</td>
+            </tr>
+            <tr>
+              <th>Passenger Doors:</th>
+              <td>{{post.passengerDoors}}</td>
+            </tr>
+            <tr>
+              <th>Body Style:</th>
+              <td>{{post.bodyStyle}}</td>
+            </tr>
+            <tr>
+              <th>Colors: </th>
+              <td>{{post.color}}</td>
+            </tr>
+            <tr>
+              <th>Price: </th>
+              <td>Rs. {{post.price}}/=</td>
+            </tr>
+            <tr>
+              <th></th>
+              <td style="text-align: right">
+                <button class="btn btn-primary">+ Add Cart</button>
+              </td>
+            </tr>
+          </table>
+          <table class="table" *ngIf="post.type == 'mobile'">
+            <tr>
+              <th>OS:</th>
+              <td>{{post.os}}</td>
+            </tr>
+            <tr>
+              <th>Memory:	</th>
+              <td>{{post.memory}}</td>
+            </tr>
+            <tr>
+              <th>Processor: </th>
+              <td>{{post.processor}}</td>
+            </tr>
+            <tr>
+              <th>Display:	</th>
+              <td>{{post.display}}</td>
+            </tr>
+            <tr>
+              <th>Colors: </th>
+              <td>{{post.color}}</td>
+            </tr>
+            <tr>
+              <th>Price: </th>
+              <td>Rs. {{post.price}}/=</td>
+            </tr>
+            <tr>
+              <th></th>
+              <td style="text-align: right">
+                <button class="btn btn-primary">+ Add Cart</button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>

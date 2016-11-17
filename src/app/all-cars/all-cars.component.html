@@ -1,0 +1,23 @@
+<div class="container" style="padding-top: 50px">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-lg-8 col-xs-offset-0 col-md-offset-1 col-lg-offset-2 block">
+      <div *ngFor="let post of posts; let i = index" >
+        <div class="row postBlock" *ngIf="post.type == 'car'">
+          <a [routerLink]="['/post', i]">
+            <div class="col-xs-12 col-md-4">
+              <img [src]="post.image" [alt]="post.company + post.model" class="postImg">
+            </div>
+            <div class="col-xs-12 col-md-8">
+              <span class="badge" style="float: left">Rs. {{post.price}}/=</span>
+              <button class="btn btn-success"  style="float: right" (click)="Onclick('btn')"><span class="glyphicon glyphicon-plus"></span> Add Cart</button>
+              <br>
+              <h2 class="postTitle">{{post.company}} {{post.model}}</h2>
+              <p class="truncate">{{post.details}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

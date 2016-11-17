@@ -1,0 +1,132 @@
+<!--<div class="navbar-fixed">-->
+  <!--<nav>-->
+    <!--<div class="nav-wrapper">-->
+      <!--<div class="col s12">-->
+        <!--<a href="/" class="brand-logo "><img src="/images/logo.png" class="logo-img" alt=""></a>-->
+
+        <!--&lt;!&ndash; Navbar menu &ndash;&gt;-->
+        <!--<a href="#" class="button-collapse"><i class="material-icons">menu</i></a>-->
+        <!--<ul class="right  hide-on-med-and-down">-->
+          <!--<li class="link"><a href="/Mobiles">Mobiles</a></li>-->
+          <!--<li class="link"><a href="/Cars">Cars</a></li>-->
+          <!--<li>-->
+            <!--<a href="" class="waves-effect waves-light btn cyan darken-2 navBtn" id="register">Creat An Account</a>-->
+            <!--<a href="" class="waves-effect waves-light btn red darken-2 navBtn" id="login"><i class="material-icons left loginIcon">perm_identity</i> LogIn</a>-->
+          <!--</li>-->
+        <!--</ul>-->
+
+      <!--</div>-->
+      <!--<ul class="side-nav">-->
+        <!--<li class="link"><a href="/Mobiles">Mobiles</a></li>-->
+        <!--<li class="link"><a href="/Cars">Cars</a></li>-->
+        <!--<li>-->
+          <!--<a href="" class="waves-effect waves-light btn cyan darken-2 " >Creat An Account</a>-->
+          <!--<a href="" class="waves-effect waves-light btn red darken-2" ><i class="material-icons left">perm_identity</i> LogIn</a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>-->
+
+  <!--</nav>-->
+<!--</div>-->
+<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 70px">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" [routerLink]="['/']"><img src="/images/logo.png" class="logo-img" alt=""></a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li class=""><a [routerLink]="['/']">Home</a></li>
+        <li><a [routerLink]="['/mobiles']">Mobile</a></li>
+        <li><a [routerLink]="['/cars']">Car</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <!--Using On Updated Version Of This App-->
+        <!--<li><a href="/login">LogIn</a></li>-->
+        <!--<li class="registerBtn"><a href="/register">Create an account</a></li>-->
+        <!--Using On Updated Version Of This App-->
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus"></span> Post Ad <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a [routerLink]="['/add/car']">Post Car</a></li>
+            <li><a [routerLink]="['/add/mobile']">Post Mobile</a></li>
+          </ul>
+        </li>
+        <li>
+          <a [routerLink]="['/cart']"><span class="glyphicon glyphicon-shopping-cart"></span> Cart <span class="badge">42</span></a>
+        </li>
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>
+<!--<div class="navbar-fixed">-->
+<!--<nav>-->
+<!--<div class="nav-wrapper">-->
+<!--<div class="col s12">-->
+<!--<a href="/" class="brand-logo "><img src="/images/logo.png" class="logo-img" alt=""></a>-->
+
+<!--&lt;!&ndash; Navbar menu &ndash;&gt;-->
+<!--<a href="#" class="button-collapse"><i class="material-icons">menu</i></a>-->
+<!--<ul class="right  hide-on-med-and-down">-->
+<!--<li class="link"><a href="/Mobiles">Mobiles</a></li>-->
+<!--<li class="link"><a href="/Cars">Cars</a></li>-->
+<!--<li>-->
+<!--<a href="" class="waves-effect waves-light btn cyan darken-2 navBtn" id="register">Creat An Account</a>-->
+<!--<a href="" class="waves-effect waves-light btn red darken-2 navBtn" id="login"><i class="material-icons left loginIcon">perm_identity</i> LogIn</a>-->
+<!--</li>-->
+<!--</ul>-->
+
+<!--</div>-->
+<!--<ul class="side-nav">-->
+<!--<li class="link"><a href="/Mobiles">Mobiles</a></li>-->
+<!--<li class="link"><a href="/Cars">Cars</a></li>-->
+<!--<li>-->
+<!--<a href="" class="waves-effect waves-light btn cyan darken-2 " >Creat An Account</a>-->
+<!--<a href="" class="waves-effect waves-light btn red darken-2" ><i class="material-icons left">perm_identity</i> LogIn</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+
+<!--</nav>-->
+<!--</div>-->
+<!--<nav class="navbar navbar-default navbar-fixed-top" style="margin-bottom: 70px">-->
+  <!--<div class="container">-->
+    <!--<div class="navbar-header">-->
+      <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">-->
+        <!--<span class="sr-only">Toggle navigation</span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+        <!--<span class="icon-bar"></span>-->
+      <!--</button>-->
+      <!--<a class="navbar-brand" href="/"><img src="/images/logo.png" class="logo-img" alt=""></a>-->
+    <!--</div>-->
+    <!--<div id="navbar" class="navbar-collapse collapse">-->
+      <!--<ul class="nav navbar-nav">-->
+        <!--<li class=""><a href="/">Home</a></li>-->
+        <!--<li><a href="/mobiles">Mobile</a></li>-->
+        <!--<li><a href="cars">Car</a></li>-->
+      <!--</ul>-->
+      <!--<ul class="nav navbar-nav navbar-right">-->
+        <!--&lt;!&ndash;Using On Updated Version Of This App&ndash;&gt;-->
+        <!--&lt;!&ndash;<li><a href="/login">LogIn</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;<li class="registerBtn"><a href="/register">Create an account</a></li>&ndash;&gt;-->
+        <!--&lt;!&ndash;Using On Updated Version Of This App&ndash;&gt;-->
+        <!--<li class="dropdown">-->
+          <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-plus"></span> Post Ad <span class="caret"></span></a>-->
+          <!--<ul class="dropdown-menu">-->
+            <!--<li><a href="/post/car">Post Car</a></li>-->
+            <!--<li><a href="post/mobile">Post Mobile</a></li>-->
+          <!--</ul>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<a href="/cart"><span class="glyphicon glyphicon-shopping-cart"></span> Cart <span class="badge">42</span></a>-->
+        <!--</li>-->
+      <!--</ul>-->
+    <!--</div>&lt;!&ndash;/.nav-collapse &ndash;&gt;-->
+  <!--</div>-->
+<!--</nav>-->
