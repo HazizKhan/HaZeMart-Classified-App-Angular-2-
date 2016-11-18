@@ -61,7 +61,7 @@
             <tr>
               <th></th>
               <td style="text-align: right">
-                <button class="btn btn-primary">+ Add Cart</button>
+                <button class="btn btn-primary" (click)="addToCart(post.id)" *ngIf="!post.inCart">+ Add Cart</button>
               </td>
             </tr>
           </table>
