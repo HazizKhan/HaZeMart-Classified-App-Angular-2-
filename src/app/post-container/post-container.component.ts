@@ -17,6 +17,11 @@ export class PostContainerComponent implements OnInit{
   Onclick(block){
     alert(block+" clicked");
   }
+  addToCart(id){
+    this.posts[id].inCart = true;
+    this.postService.onAddToCart(id);
+  }
+
   ngOnInit(){
     (<HTMLTitleElement>document.getElementsByTagName("title")[0]).innerText = "HaZeMart";
 

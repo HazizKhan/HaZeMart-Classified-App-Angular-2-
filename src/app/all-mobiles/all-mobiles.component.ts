@@ -12,6 +12,10 @@ export class AllMobilesComponent implements OnInit {
   constructor(private service: PostService) {
     this.posts = this.service.getPosts();
   }
+  addToCart(id){
+    this.posts[id].inCart = true;
+    this.service.onAddToCart(id);
+  }
   ngOnInit() {
     (<HTMLTitleElement>document.getElementsByTagName("title")[0]).innerText = "Mobiles | HaZeMart";
 

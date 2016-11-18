@@ -23,6 +23,7 @@ const appRoutes: Routes = [
   {path: 'add/car', component: NewCarComponent},
   {path: 'add/mobile', component : NewMobileComponent},
   {path: 'cart', component : CartComponent},
+  {path:'**', component: PostContainerComponent}
 
 ];
 

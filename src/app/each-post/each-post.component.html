@@ -11,7 +11,7 @@
       <hr>
       <hr>
 
-      <h2>Whats New:</h2>
+      <h2>Description:</h2>
       <hr>
       <div class="row">
         <div class="col-md-10 col-xs-push-1 col-xs-push-0 col-lg-push-1 col-sm-push-0">
@@ -21,7 +21,7 @@
       <h2>Details:</h2>
       <div class="row">
         <div class="col-md-10 col-xs-push-1 col-xs-push-0 col-lg-push-1 col-sm-push-0">
-          <table *ngIf="post.type == 'car'" class="table">
+          <table *ngIf="post.type == 'car'" class="table table-striped">
             <tr>
               <th>Engine:</th>
               <td>{{post.engine}}</td>
@@ -65,7 +65,7 @@
               </td>
             </tr>
           </table>
-          <table class="table" *ngIf="post.type == 'mobile'">
+          <table class="table table-striped" *ngIf="post.type == 'mobile'">
             <tr>
               <th>OS:</th>
               <td>{{post.os}}</td>
@@ -80,7 +80,7 @@
             </tr>
             <tr>
               <th>Display:	</th>
-              <td>{{post.display}}</td>
+              <td>{{post.screen}}</td>
             </tr>
             <tr>
               <th>Colors: </th>
@@ -93,13 +93,12 @@
             <tr>
               <th></th>
               <td style="text-align: right">
-                <button class="btn btn-primary">+ Add Cart</button>
+                <button class="btn btn-primary" (click)="addToCart(post.id)" *ngIf="!post.inCart">+ Add Cart</button>
               </td>
             </tr>
           </table>
         </div>
       </div>
-
     </div>
   </div>
 </div>

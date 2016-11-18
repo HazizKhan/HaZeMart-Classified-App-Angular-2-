@@ -5,13 +5,16 @@ export class Ad{
     color: string;
     image: string;
     details: string;
-    constructor(model:string,company:string,price:number,color:string,image:string, details: string){
+    id: number;
+    inCart = false;
+    constructor(model:string,company:string,price:number,color:string,image:string, details: string, id:number){
         this.model = model;
         this.color = color;
         this.company = company;
         this.price = price;
         this.image = image;
         this.details = details;
+        this.id = id;
     }
 }
 export class Mobile extends Ad{
@@ -20,8 +23,8 @@ export class Mobile extends Ad{
     memory: string;
     os: string;
     type: string;
-    constructor(model:string,company:string,price:number,color:string,processor:string,screen:string, memory: string, os:string, image:string, details:string){
-        super(model,company,price,color,image, details);
+    constructor(model:string,company:string,price:number,color:string,processor:string,screen:string, memory: string, os:string, image:string, details:string, id){
+        super(model,company,price,color,image, details, id);
         this.processor = processor;
         this.memory = memory;
         this.screen = screen;
@@ -40,8 +43,8 @@ export class Car extends Ad{
     bodyStyle: string;
     type: string;
     constructor(model:string,company:string,price:number,color:string,engine:string,epaClass:string,
-                styleName:string,driveTrain:string,passengerCapacity:number, passengerDoors:number, bodyStyle:string,image:string, details:string){
-        super(model,company,price,color, image, details);
+                styleName:string,driveTrain:string,passengerCapacity:number, passengerDoors:number, bodyStyle:string,image:string, details:string, id){
+        super(model,company,price,color, image, details, id);
         this.epaClass = epaClass;
         this.styleName = styleName;
         this.driveTrain = driveTrain;

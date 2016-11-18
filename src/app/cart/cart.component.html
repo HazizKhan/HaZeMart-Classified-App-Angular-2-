@@ -1,3 +1,35 @@
-<p>
-  cart works!
-</p>
+<div class="container" style="padding-top: 50px">
+  <div class="row">
+    <div class="col-xs-12 col-md-10 col-lg-8 col-xs-offset-0 col-md-offset-1 col-lg-offset-2 block">
+      <div *ngIf="posts.length">
+      <div class="row postBlock" *ngFor="let post of posts; let i = index">
+        <!--<post-container [post]="post"></post-container>-->
+        <a [routerLink]="['/post', post.id]">
+
+          <div class="col-xs-12 col-md-4">
+            <img [src]="post.image" [alt]="post.company + post.model" class="postImg">
+          </div>
+        </a>
+        <div class="col-xs-12 col-md-8">
+          <a [routerLink]="['/post', post.id]">
+
+            <span class="badge" style="float: left">Rs. {{post.price}}/=</span>
+          </a>
+
+          <button class="btn btn-danger"  style="float: right" (click)="deleteFromCart(i)" *ngIf="post.inCart"><span class="glyphicon glyphicon-trash"></span> Delete From Cart</button>
+
+          <a [routerLink]="['/post', post.id]">
+
+            <br>
+            <h2 class="postTitle">{{post.company}} {{post.model}}</h2>
+            <p class="truncate">{{post.details}}</p>
+          </a>
+        </div>
+      </div>
+      </div>
+      <div *ngIf="!posts.length">
+        <h1 style="margin-bottom: 25px; text-align: center">Your Cart Is Empty</h1>
+      </div>
+    </div>
+  </div>
+</div>

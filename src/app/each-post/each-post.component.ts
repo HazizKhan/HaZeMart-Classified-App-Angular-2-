@@ -23,7 +23,10 @@ export class EachPostComponent implements OnInit, OnDestroy {
     );
     this.post = this.postService.getPosts()[this.id];
   }
-
+  addToCart(id){
+    this.post.inCart = true;
+    this.postService.onAddToCart(id);
+  }
   ngOnInit() {
     (<HTMLTitleElement>document.getElementsByTagName("title")[0]).innerText = this.post.company + ' ' + this.post.model;
   }
