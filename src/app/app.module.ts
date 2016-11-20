@@ -14,6 +14,7 @@ import {PostService} from "./post.service";
 import { CartComponent } from './cart/cart.component';
 import { EachPostComponent } from './each-post/each-post.component';
 import {AppRoutingModule} from "./app-routing.module";
+import {LocationStrategy, HashLocationStrategy} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import {AppRoutingModule} from "./app-routing.module";
     HttpModule,
     AppRoutingModule
   ],
-  providers: [PostService],
+  providers: [PostService, { provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
